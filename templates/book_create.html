@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <form method="post">{% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="row mb-3">
+            <label for="{{ form.title.id_for_label }}" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+                {{ form.title }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="{{ form.author.id_for_label }}" class="col-sm-2 col-form-label">Author</label>
+            <div class="col-sm-10">
+                {{ form.author }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="{{ form.published.id_for_label }}" class="col-sm-2 col-form-label">Published</label>
+            <div class="col-sm-10">
+                {{ form.published }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="{{ form.isbn.id_for_label }}" class="col-sm-2 col-form-label">ISBN</label>
+            <div class="col-sm-10">
+                {{ form.isbn }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="{{ form.pages.id_for_label }}" class="col-sm-2 col-form-label">Pages</label>
+            <div class="col-sm-10">
+                {{ form.pages }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="{{ form.cover.id_for_label }}" class="col-sm-2 col-form-label">Cover</label>
+            <div class="col-sm-10">
+                {{ form.cover }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="{{ form.language.id_for_label }}" class="col-sm-2 col-form-label">Language</label>
+            <div class="col-sm-10">
+                {{ form.language }}
+            </div>
+        </div>
+        <input type="submit" value="Create">
+    </form>
+{% endblock %}
